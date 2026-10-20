@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#eff8ff">
+  <title>My Street — Build Your Own Street</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar" id="topbar"><div class="brand"><img class="brand-logo" src="assets/logo-01.png" alt="Learning Habitat Kindergarten & Bilingual Nursery"><div><strong>My Street</strong><small data-i="subtitle">Place shops in the boxes on the right</small></div></div>
+      <div class="top-actions"><button class="light-btn" id="reset">⟲ <span data-i="reset">Reset All</span></button><div class="lang"><button data-lang="en" class="active">English</button><button data-lang="zh">中文</button></div><button class="info light-btn" id="info" aria-label="Information">ⓘ</button><button class="play" id="play">▶ <span data-i="play">Play</span></button></div>
+    </header>
+    <main class="editor" id="editor"><aside class="library"><h2 data-i="library">Shop Library</h2><p data-i="hint">Drag the shop to an empty box, or click a shop and then a box.</p>
+      <div class="batch-controls"><label class="multi-toggle"><input type="checkbox" id="multiMode"><span data-i="multiSelect">Select multiple shops</span></label><div id="batchActions" hidden><div class="batch-order"><button type="button" id="orderSelected" class="active" data-i="selectedOrder">Placed in order</button><button type="button" id="orderRandom" data-i="randomOrder">Random order</button></div><div class="batch-buttons"><span id="selectionCount" data-i="selectedCount">0 selected</span><button type="button" id="placeSelected" disabled data-i="placeSelected">Place selected</button><button type="button" id="clearSelection" disabled data-i="clearSelection">Clear</button></div></div></div>
+      <div class="shop-list" id="shopList"></div></aside><section class="map-area"><div class="street-grid" id="streetGrid"></div></section></main>
+    <section class="scene" id="scene" aria-label="3D street"><canvas id="streetCanvas" aria-label="Interactive 3D street scene"></canvas>
+      <button class="return-btn" id="return">← <span data-i="return">Return to Edit</span></button><div class="scene-lang lang"><button data-lang="en" class="active">English</button><button data-lang="zh">中文</button></div><div class="facing" id="facing">Facing: South</div>
+      <div class="controls"><div class="control-panel"><small data-i="view">VIEW</small><div><button id="rotateLeft" aria-label="Rotate left">⟲</button><button id="rotateRight" aria-label="Rotate right">⟳</button></div></div><div class="control-panel walk-panel"><small data-i="walk">WALK</small><button class="up" data-move="forward">⌃</button><div><button data-move="left">‹</button><i></i><button data-move="right">›</button></div><button class="down" data-move="backward">⌄</button></div></div>
+    </section>
+  </div>
+  <div class="modal-backdrop" id="modal"><div class="modal"><button class="close" id="closeModal">×</button><h2 data-i="modalTitle">Add Your Own Shop</h2><label for="shopName" data-i="name">Name</label><input id="shopName" placeholder="Candy Shop"><label data-i="imageLabel">Shop Image</label><label class="upload-box" id="uploadBox"><input type="file" id="fileInput" accept="image/*"><span id="uploadPrompt">⇧<br><span data-i="chooseImage">Click to choose an image</span></span><canvas id="cropCanvas" width="320" height="320" hidden></canvas></label><div id="cropControls" hidden><label data-i="crop">Square crop · drag to reposition</label><input type="range" id="zoom" min="1" max="3" step="0.01" value="1"></div><button class="submit" id="submitShop" disabled data-i="addLibrary">Add to Library</button></div></div>
+  <div class="toast" id="toast"></div><script type="module" src="street3d.js"></script><script src="app.js"></script>
+</body></html>
