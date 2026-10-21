@@ -16,7 +16,7 @@ Then visit `http://localhost:8000/`. The included shop images are the PNG files 
 
 1. Drag a shop card into any of the 20 slots, or click a card and then an empty slot. The x on a placed shop removes it. Reset All clears the street.
 2. Turn on **Select multiple shops** to choose several available cards. Choose selected or random order, then use **Place selected** to fill the next empty slots. The Add Your Shop card remains the last card in the two-column library.
-3. Choose **Add Your Shop**, enter a name, choose an image, drag on the preview to position the square crop, and use the zoom slider. Add it to the library, then place it like any other shop. The image is cropped locally in a canvas and kept in memory only.
+3. Choose **Add Your Shop**, enter a name, and click **Click to choose an image**. The full image appears with a square crop selection; drag the square to reposition it and use the slider to change its size. Add it to the library, then place it like any other shop. The form clears after adding or closing a shop. The image is cropped locally in a canvas and kept in memory only.
    Custom cards have a separate × button to delete the shop. Deletion asks for confirmation and removes its placements too.
 4. Place shops and choose **Play**. The perspective street has actual building and road geometry, spaced buildings, and a five-stripe crossing. Rotate with the view buttons; hold the walk buttons (or use W/A/S/D and up/down keys) to move. **Return to Edit** preserves the current street.
 5. Choose **中文** or **English** to change the interface language.
